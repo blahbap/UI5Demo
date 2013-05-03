@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html ng-app="transportList" lang="en">
+<head>
+<meta charset="utf-8">
+<title>SAP Transports</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="lib/donuts/donuts.css" rel="stylesheet">
+
+<style>
+body {
+	padding-top: 60px;
+	/* 60px to make the container go all the way to the bottom of the topbar */
+}
+</style>
+<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<a class="brand" href="#">SAP UI5</a>
+			<ul class="nav">
+				<li ><a href="#">All transports</a></li>
+				<li><a href="mytransports.html">My transports</a></li>
+				<li><a href="ui5table.html">UI5 Table</a></li>
+				<li class="active"><a href="graphs.html">Graphs</a></li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="container" ng-controller="graphTransportsListController">
+		<div class="row">
+			<div class="well">
+				<h1>Graphs using Chart.js</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span4">
+				<h4>A pie</h4>
+				<div class="piechart" data-model='[{"value": 30,"color":"#F38630"},{ "value" : 50,"color" : "#E0E4CC"},{"value" : 100,"color" : "#69D2E7"}]'></div>
+			</div>
+			<div class="span4">
+				<h4>Short dumps last 15 days (from S03)</h4>
+				<div class="barchart"> </div>
+			</div>
+			<div class="span4">
+				<h4>Transports 2011 vs 2012 (from S03)</h4>
+				<div class="linechart"></div>
+			</div>
+		</div>
+		<div class="row" style="margin-top:30px" >		
+			<div class="offset1 span2">
+				<h4>Some data:</h4>			
+				<div class="donut donut-big">
+					<div class="donut-arrow" data-percentage="10"></div>
+				</div>
+			</div>		
+			<div class="offset1 span2">		
+				<h4>Some data:</h4>				
+				<div class="donut donut-big">
+					<div class="donut-arrow" data-percentage="78"></div>
+				</div>
+			</div>		
+			<div class="offset1 span2">			
+				<h4>Some data:</h4>				
+				<div class="donut donut-big">
+					<div class="donut-arrow" data-percentage="56"></div>
+				</div>
+			</div>		
+			<div class="offset1 span2">			
+				<h4>Some data:</h4>				
+				<div class="donut donut-big">
+					<div class="donut-arrow" data-percentage="24"></div>
+				</div>
+			</div>		
+		</div>
+
+	</div>
+
+	<script src="lib/jquery/jquery-1.9.1.min.js"></script>
+	<script src="lib/chart/Chart.js"></script>
+	<script src="lib/donuts/donuts.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+	<script src="js/controller.js"></script>
+
+
+</body>
+</html>
